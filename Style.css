@@ -10,13 +10,15 @@ html,body{
 }
 
 #nav{
-    /* background: rgba(220, 20, 60, 0.407); */
     height: 10%;
     padding: 2% 3%;
     display: flex;
     align-items: center;
-    justify-content: end;
+    justify-content: space-between;
     gap: 15px;
+}
+#logo{
+    color: rgb(13, 13, 163);
 }
 #nav a{
     text-decoration: none;
@@ -27,18 +29,123 @@ html,body{
 }
 #nav a:hover{
     text-decoration: underline;
-    color: cadetblue;
+    color: rgb(0, 4, 219);
     transition: all 0.2s ease-out;
 }
 #page1{
+    width: 100vw;
+    height: 100vh;
+}
+#page2{
     height: 100%;
     width: 100%;
     padding: 3% 5%;
-    /* background: red; */
     position: relative;
 }
 #map{
   position: absolute;
-  /* top: 50%; */
   left: 18%;
+}
+#main>h1{
+    text-align: center;
+    color: rgb(20, 20, 141);
+}
+#main>p{
+    width: 90%;
+    text-align: center;
+    font: .5rem;
+    margin: 1rem 4rem;
+}
+a{
+	text-decoration: none;
+	color: #000;
+}
+li {
+    list-style: none;
+}
+html{
+	height: 100%;
+}
+body{
+	width: 100%;
+	height: 100%;
+}
+.clearfix{
+	clear: both;
+}
+.containar {
+  /*display: flex;*/
+  background: #caedfd;
+}
+.slider {
+
+    background: #ffffff;
+    position: relative;
+
+}
+.slider-img {
+    width: 600px;
+    height: 600px;
+    margin: 0 auto;
+    padding: 30px 0;
+    text-align: center;
+}
+#ul-parent {
+    position: relative;
+    perspective: 1000px;
+    transform-style: preserve-3d;
+    /*transform-origin: 40% 0;*/
+
+}
+#ul-parent li{
+	position: absolute;
+	width: 100%;
+    background-color: #fff;
+	animation-name: slider;
+	animation-duration: 20s;
+	animation-iteration-count: infinite; 
+}
+#ul-parent li img {
+    width: 30vw;
+}
+#ul-parent li:nth-child(1){
+	transform: translateX(0);
+	animation-delay: -20s;
+}
+#ul-parent li:nth-child(2){
+	transform: translateX(550px) translateZ(-300px) rotateY(30deg);
+	animation-delay: -15S;
+}
+#ul-parent li:nth-child(3){
+	transform:translateZ(-500px);
+	animation-delay: -10S;
+}
+#ul-parent li:nth-child(4){
+	transform: translateX(-550px) translateZ(-300px) rotateY(-30deg);
+	animation-delay: -5S;
+}
+@keyframes slider{
+	0%,20%{
+		transform: translateX(0);
+	}
+	25%,45%{
+		transform: translateX(550px) translateZ(-300px) rotateY(30deg);
+	}
+	50%,70%{
+		transform: translateZ(-500px)
+	}
+	75%,95%{
+		transform: translateX(-550px) translateZ(-300px) rotateY(-30deg);
+	}
+	97%{
+		transform: translateX(-550px) translateZ(-300px) rotateY(-30deg) translateX(-400);	
+	}
+	100%{
+		transform: translateX(0);
+
+	}
+}
+#page-3{
+    width: 100vw;
+    height: 100vh;
 }
