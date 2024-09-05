@@ -14,14 +14,14 @@ html,body{
 }
 #nav{
     height: 10%;
-    padding: 2% 3%;
+    padding: 2rem 8rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 15px;
 }
 #logo{
-    color: rgb(13, 13, 163);
+    color: rgb(75, 75, 247);
 }
 #nav a{
     text-decoration: none;
