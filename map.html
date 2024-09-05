@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Google Maps</title>
+  <style>
+    /* Style for the map */
+    #map {
+      height: 100vh;
+      width: 100%;
+    }
+  </style>
+  <script>
+    // Function to extract URL parameters
+    function getQueryParameter(param) {
+      const urlParams = new URLSearchParams(window.location.search);
+      return urlParams.get(param);
+    }
+
+    // Initialize the map
+    function initMap() {
+      const location = getQueryParameter('location');
+
+      if (!location) {
+        alert("Location not found!");
+        return;
+      }
+
+      // Use Geocoding API to convert location name to lat/lng
+      const geocoder = new google.maps.Geocoder();
+      geocoder.geocode({ address: location }, function(results, status) {
+        if (status === 'OK') {
+          const map = new google.maps.Map(document.getElementById('map'), {
+            zoom: 14,
+            center: results[0].geometry.location
+          });
+
+          new google.maps.Marker({
+            position: results[0].geometry.location,
+            map: map
+          });
+        } else {
+          alert("Geocode was not successful for the following reason: " + status);
+        }
+      });
+    }
+  </script>
+  <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD-MPhXBbh4yjtHQ2Z4HiDBgJhs3a-_PhE&callback=initMap">
+  </script>
+</head>
+<body>
+  <div id="map"></div>
+</body>
+</html>

@@ -21,7 +21,7 @@ html,body{
     gap: 15px;
 }
 #logo{
-    color: rgb(75, 75, 247);
+    color: rgb(93, 93, 240);
 }
 #nav a{
     text-decoration: none;
@@ -32,13 +32,14 @@ html,body{
 }
 #nav a:hover{
     text-decoration: underline;
-    color: rgb(0, 4, 219);
+    color: rgb(93, 93, 240);
+
     transition: all 0.2s ease-out;
 }
-#page1{
+/* #page1{
     width: 100vw;
     height: 100vh;
-}
+} */
 #page2{
     height: 100%;
     width: 100%;
@@ -53,7 +54,7 @@ html,body{
 }
 #main>h1{
     text-align: center;
-    color: rgb(20, 20, 141);
+    color: rgb(93, 93, 240);
 }
 #main>p{
     width: 50%;
@@ -209,6 +210,33 @@ body{
 
 	}
 }
+#input{
+    position: absolute;
+    left: 50%;
+    top: 78%;
+    transform: translate(-50%,-50%);
+    padding: 15px 20px;
+    width: 35%;
+    border-radius: 10px;
+    border: 1px solid royalblue;
+    background: whitesmoke;
+    font-size: 1rem;
+}
+
+.btn-search{
+    padding: 10px 30px;
+    background-color: rgb(93, 93, 240);
+    border-radius: 10px;
+    border: none;
+    color: white;
+    margin-bottom: 30px;
+    font-size: 1.2rem;
+    position: absolute;
+    left: 50%;
+    top: 88%;
+    transform: translate(-50%,-50%);
+    
+}
 #page-3{
     width: 100vw;
     height: 100vh;
@@ -236,7 +264,57 @@ body{
     /* background-color: #fff; */
 }
 .container-content h1{
-    color: rgb(20, 20, 141) ;
+    color: rgb(93, 93, 240);
+    font-size: 2.7rem;
+    text-align: end;
+}
+.container-content p{
+    margin-top: 2rem;
+    text-align: end;
+    font-size: 1.2rem;
+}
+.img-section-2 img{
+    margin-left: 2rem;
+    width: 80%;
+    position: relative;
+    top: -7%;
+    left: 17%;
+}
+.row{
+	display: flex;
+	flex-wrap: wrap;
+}
+ul{
+	list-style: none;
+}
+#page-4{
+    width: 100vw;
+    height: 100vh;
+    padding: 0 4rem;
+}
+.container{
+    width: 90vw;
+    height: 80vh;
+    display: flex;
+    gap: 6rem;
+    padding: 90px 50px 50px 50px ;
+    border-radius: 5px; 
+}
+.img-section{
+    width: 60%;
+    height: 100%;
+    /* background-color: blue; */
+}
+.img-section img{
+    width: 90%;
+}
+.container-content{
+    width: 40%;
+    height: 100%;
+    /* background-color: #fff; */
+}
+.container-content h1{
+    color: rgb(93, 93, 240);
     font-size: 2.7rem;
     text-align: end;
 }
@@ -263,7 +341,7 @@ ul{
     width: 100vw;
     height: 60vh;
 	background-color: #010036;
-    padding: 70px 0;
+    padding: 50px 0;
     /* margin-top: 3rem; */
 }
 .footer-col{
@@ -333,4 +411,19 @@ ul{
   .footer-col{
     width: 100%;
 }
+}
+#head-map{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(81, 81, 198);
+    font-weight: 500;
+    font-size: 3rem;
+}
+#mapy{
+    margin-left: 10rem;
+    width: 80%;
+    height: 500px;
+    margin-top: 50px;
+    border-radius: 5px;
 }

@@ -33,3 +33,20 @@ function raf() {
 }
 
 raf();
+
+ // Function to handle the search operation and redirect
+ function searchLocation() {
+    const location = document.getElementById('input').value;
+    if (location) {
+      // Redirect to map.html with the location as a URL parameter
+      window.location.href = `map.html?location=${encodeURIComponent(location)}`;
+    } else {
+      alert("Please enter a location.");
+    }
+  }
+
+  // Adding an event listener to the button for the search action
+  document.addEventListener('DOMContentLoaded', function() {
+    const searchButton = document.querySelector('.btn-search');
+    searchButton.addEventListener('click', searchLocation);
+  });
