@@ -83,8 +83,10 @@ body{
   background: #caedfd;
 }
 .slider {
-
+    width: 100vw;
+    height: 80vh;
     background: #ffffff;
+    padding: 3rem;
     position: relative;
 
 }
